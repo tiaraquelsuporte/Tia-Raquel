@@ -1,0 +1,6 @@
+{
+  "name": "Exploração Inglês",
+  "description": "Landing page de alta conversão para o infoproduto Exploração Inglês, com mais de 500 dinâmicas infantis de inglês.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
