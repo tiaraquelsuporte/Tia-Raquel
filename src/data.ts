@@ -472,10 +472,5 @@ export const faqItems: FAQItem[] = [
     id: 6,
     question: "O pagamento é único?",
     answer: "Sim. Você paga apenas uma vez e recebe acesso completo ao material."
-  },
-  {
-    id: 7,
-    question: "Tenho garantia?",
-    answer: "Sim. Sua compra é protegida por garantia para que você possa adquirir o material com total segurança."
   }
 ];

@@ -21,7 +21,7 @@ import { headlines, subheadlines, ctas, microBenefits, quickProofs } from './dat
 import VideoPlayer from './components/VideoPlayer';
 import WhatYouReceive from './components/WhatYouReceive';
 import Offer from './components/Offer';
-import Testimonials from './components/Testimonials';
+import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
@@ -162,9 +162,10 @@ export default function App() {
                 id="cta-hero-primary"
                 key={currentCtaId}
                 onClick={() => {
-                  setSelectedPlan('premium');
-                  setCheckoutStep(1);
-                  setIsCheckoutOpen(true);
+                  const element = document.getElementById('oferta');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
                 }}
                 className="w-full py-5 px-6 rounded-2xl bg-[#22C55E] hover:bg-[#1db354] text-white font-extrabold text-[15px] sm:text-base tracking-wider shadow-[0_12px_32px_rgba(34,197,94,0.35)] hover:scale-[1.025] active:scale-[0.98] cursor-pointer transition-all border border-emerald-400/20 flex items-center justify-center gap-2 uppercase select-none font-sans"
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -198,8 +199,8 @@ export default function App() {
         setIsCheckoutOpen(true);
       }} />
 
-      {/* 5. Depoimentos (WhatsApp Video and Stories) */}
-      <Testimonials />
+      {/* 5. Avaliações Clean & Realistas */}
+      <Reviews />
 
       {/* 7. FAQ Section */}
       <FAQ />

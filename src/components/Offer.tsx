@@ -52,7 +52,7 @@ export default function Offer({ onCtaClick }: OfferProps) {
 
       <div className="text-center mb-12 relative z-10 px-4">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1E3F] font-display tracking-tight mb-3">
-          Escolha o Plano Ideal para Você
+          Plano Ideal para Você
         </h2>
       </div>
 
@@ -143,16 +143,18 @@ export default function Offer({ onCtaClick }: OfferProps) {
           {/* Pricing & CTA */}
           <div className="mt-auto pt-4.5 border-t border-white/[0.08]">
             {/* Primary CTA Button for High Conversion */}
-            <motion.button
-              onClick={() => onCtaClick?.('basic')}
-              className="w-full py-4 px-6 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-black text-xs sm:text-sm tracking-widest uppercase shadow-[0_4px_24px_rgba(37,99,235,0.4)] cursor-pointer flex items-center justify-center gap-2 transition-all border border-blue-400/20"
+            <motion.a
+              href="https://ggcheckout.app/checkout/v5/CW6ddAPZ8KteeXBEcgtt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-4 px-6 rounded-full bg-blue-600 hover:bg-blue-500 hover:bg-opacity-95 text-white font-black text-xs sm:text-sm tracking-widest uppercase shadow-[0_4px_24px_rgba(37,99,235,0.4)] cursor-pointer flex items-center justify-center gap-2 transition-all border border-blue-400/20 text-center select-none"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               animate={{ scale: [1, 1.02, 1] }}
               transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
             >
               <span>QUERO O GUIA COMPLETO</span>
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
 
