@@ -233,7 +233,7 @@ export default function App() {
         setIsCheckoutOpen(true);
       }} />
 
-      {/* 4. Oferta (Promocional R$ 9,90) */}
+      {/* 4. Oferta (Promocional R$ 10,00) */}
       <Offer onCtaClick={(plan) => {
         setSelectedPlan(plan);
         setCheckoutStep(1);
@@ -288,7 +288,7 @@ export default function App() {
                   Concluir Inscrição - Exploração Inglês
                 </h3>
                 <p className="text-[10px] text-blue-100 opacity-90 mt-0.5">
-                  Preço Promocional Único: <span className="line-through">{selectedPlan === 'premium' ? 'R$ 67,90' : 'R$ 37,90'}</span> por <strong className="text-yellow-300 text-xs">{selectedPlan === 'premium' ? 'R$ 19,90' : 'R$ 9,90'}</strong>
+                  Preço Promocional Único: <span className="line-through">{selectedPlan === 'premium' ? 'R$ 67,90' : 'R$ 37,90'}</span> por <strong className="text-yellow-300 text-xs">{selectedPlan === 'premium' ? 'R$ 19,90' : 'R$ 10,00'}</strong>
                 </p>
               </div>
 
