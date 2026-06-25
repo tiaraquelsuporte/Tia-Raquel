@@ -14,7 +14,8 @@ import {
   QrCode, 
   CheckCircle,
   HelpCircle,
-  Smartphone
+  Smartphone,
+  Star
 } from 'lucide-react';
 
 import { headlines, subheadlines, ctas, microBenefits, quickProofs } from './data';
@@ -31,8 +32,8 @@ export default function App() {
   const [currentSubheadlineId, setSubheadlineId] = useState<number>(1);
   const [currentCtaId, setCtaId] = useState<number>(1);
 
-  // Countdown timer: 15 minutes
-  const [timeLeft, setTimeLeft] = useState(15 * 60);
+  // Countdown timer: 8 minutes
+  const [timeLeft, setTimeLeft] = useState(8 * 60);
   
   // Checkout modal Simulation
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -54,7 +55,7 @@ export default function App() {
   // Countdown clock tick
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 15 * 60)); // Loop back if expired for endless mock testing
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 8 * 60)); // Loop back if expired for endless mock testing
     }, 1000);
     return () => clearInterval(timer);
   }, []);
@@ -94,8 +95,16 @@ export default function App() {
   return (
     <div id="landing-page-root" className="min-h-screen bg-white text-slate-800 font-sans tracking-tight antialiased selection:bg-yellow-200">
       
-
-
+      {/* DYNAMIC TOP COUNTDOWN BAR (Vibrant blue background matching the main headline with hot glowing fire accents) */}
+      <div className="bg-gradient-to-r from-[#0B1E3F] via-[#1a365d] to-[#0B1E3F] text-white py-3 px-4 text-center text-xs sm:text-sm font-medium flex items-center justify-center gap-2 shadow-md relative z-50 border-b border-blue-900/40 select-none">
+        <span className="flex h-2 w-2 relative">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
+        </span>
+        <span className="flex items-center gap-1 flex-wrap justify-center">
+          🔥 <span className="text-amber-300 font-extrabold tracking-wider text-[11px] sm:text-xs bg-amber-400/10 px-2 py-0.5 rounded-sm uppercase">Oferta por Tempo Limitado:</span> A oferta terminará em <span className="font-mono bg-white/10 text-amber-300 px-2.5 py-0.5 rounded-md font-black mx-1 tracking-wider text-sm">{formatTime(timeLeft)}</span> minutos! Garanta seu desconto agora.
+        </span>
+      </div>
 
       {/* 3. Hero Section (All items Centered with spacious visual pacing for high CRO) */}
       <section id="hero" className="relative pt-12 pb-20 sm:pt-20 sm:pb-32 px-4 sm:px-6 overflow-hidden flex flex-col items-center text-center justify-center bg-white select-all">
@@ -177,6 +186,38 @@ export default function App() {
                 <ChevronRight className="w-5 h-5 text-yellow-300 animate-pulse" />
               </motion.button>
             </AnimatePresence>
+
+            {/* Social proof message below the CTA button */}
+            <div className="mt-4 flex flex-row items-center justify-center gap-1.5 text-[11px] sm:text-xs text-slate-500 font-bold select-none flex-wrap">
+              <div className="flex -space-x-1.5 shrink-0">
+                <img 
+                  className="w-5.5 h-5.5 rounded-full border border-white object-cover shadow-sm" 
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120&h=120" 
+                  alt="Professora" 
+                  referrerPolicy="no-referrer"
+                />
+                <img 
+                  className="w-5.5 h-5.5 rounded-full border border-white object-cover shadow-sm" 
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120&h=120" 
+                  alt="Mãe" 
+                  referrerPolicy="no-referrer"
+                />
+                <img 
+                  className="w-5.5 h-5.5 rounded-full border border-white object-cover shadow-sm" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120&h=120" 
+                  alt="Educador" 
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <span className="shrink-0">Mais de 2.000 pessoas aprovaram</span>
+              <div className="flex gap-0.5 shrink-0 text-amber-400">
+                <Star className="w-3 h-3 fill-current" />
+                <Star className="w-3 h-3 fill-current" />
+                <Star className="w-3 h-3 fill-current" />
+                <Star className="w-3 h-3 fill-current" />
+                <Star className="w-3 h-3 fill-current" />
+              </div>
+            </div>
 
           </div>
 
