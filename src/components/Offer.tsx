@@ -46,7 +46,7 @@ export default function Offer({ onCtaClick }: OfferProps) {
   ];
 
   return (
-    <section id="oferta" className="py-20 bg-slate-50 text-slate-800 relative overflow-hidden flex flex-col items-center justify-center select-none">
+    <section id="oferta" className="pt-10 pb-20 bg-slate-50 text-slate-800 relative overflow-hidden flex flex-col items-center justify-center select-none">
       {/* Background soft glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-100/20 rounded-full blur-[140px] pointer-events-none" />
 

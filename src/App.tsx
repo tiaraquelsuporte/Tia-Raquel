@@ -21,6 +21,7 @@ import {
 import { headlines, subheadlines, ctas, microBenefits, quickProofs } from './data';
 import VideoPlayer from './components/VideoPlayer';
 import WhatYouReceive from './components/WhatYouReceive';
+import Bonuses from './components/Bonuses';
 import Offer from './components/Offer';
 import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
@@ -232,6 +233,9 @@ export default function App() {
         setCheckoutStep(1);
         setIsCheckoutOpen(true);
       }} />
+
+      {/* 3. Bônus Exclusivos (Clean e Organizado) */}
+      <Bonuses />
 
       {/* 4. Oferta (Promocional R$ 10,00) */}
       <Offer onCtaClick={(plan) => {
