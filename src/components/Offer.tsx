@@ -147,6 +147,18 @@ export default function Offer({ onCtaClick }: OfferProps) {
               href="https://ggcheckout.app/checkout/v5/CW6ddAPZ8KteeXBEcgtt"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                try {
+                  (window as any).pixelId = "6a3c2ccd2835ec134e52ecaa";
+                  const a = document.createElement("script");
+                  a.setAttribute("async", "");
+                  a.setAttribute("defer", "");
+                  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+                  document.head.appendChild(a);
+                } catch (e) {
+                  console.error(e);
+                }
+              }}
               className="w-full py-4 px-6 rounded-full bg-blue-600 hover:bg-blue-500 hover:bg-opacity-95 text-white font-black text-xs sm:text-sm tracking-widest uppercase shadow-[0_4px_24px_rgba(37,99,235,0.4)] cursor-pointer flex items-center justify-center gap-2 transition-all border border-blue-400/20 text-center select-none"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
