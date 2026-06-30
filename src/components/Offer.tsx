@@ -80,6 +80,8 @@ export default function Offer({ onCtaClick }: OfferProps) {
                   alt="Kit 500+ Dinâmicas de Inglês" 
                   className="w-[290px] sm:w-[350px] h-auto drop-shadow-[0_25px_35px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-300 ease-out z-10"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 

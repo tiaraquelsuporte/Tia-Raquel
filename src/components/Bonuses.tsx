@@ -59,6 +59,8 @@ export default function Bonuses() {
                         alt={bonus.title} 
                         className={bonus.imgClass}
                         referrerPolicy="no-referrer"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   ) : (

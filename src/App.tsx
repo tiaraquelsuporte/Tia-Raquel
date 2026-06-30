@@ -196,18 +196,21 @@ export default function App() {
                   src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120&h=120" 
                   alt="Professora" 
                   referrerPolicy="no-referrer"
+                  decoding="async"
                 />
                 <img 
                   className="w-5.5 h-5.5 rounded-full border border-white object-cover shadow-sm" 
                   src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120&h=120" 
                   alt="Mãe" 
                   referrerPolicy="no-referrer"
+                  decoding="async"
                 />
                 <img 
                   className="w-5.5 h-5.5 rounded-full border border-white object-cover shadow-sm" 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120&h=120" 
                   alt="Educador" 
                   referrerPolicy="no-referrer"
+                  decoding="async"
                 />
               </div>
               <span className="shrink-0">Mais de 2.000 pessoas aprovaram</span>

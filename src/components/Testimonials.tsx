@@ -124,6 +124,8 @@ export default function Testimonials() {
                   alt={TESTIMONIAL_IMAGES[currentIndex].alt}
                   className="w-full h-auto select-none pointer-events-none bg-white block"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               </motion.div>
             </AnimatePresence>

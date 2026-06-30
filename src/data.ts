@@ -294,34 +294,34 @@ export const quickProofs: string[] = [
 
 export const benefits: Benefit[] = [
   {
-    iconName: "Sparkles",
-    title: "Inglês através do brincar",
-    description: "Método 100% lúdico focado em canções, mímicas, brincadeiras físicas e comandos que ensinam inglês sem parecer estudo."
+    iconName: "Star",
+    title: "+500 Dinâmicas Prontas",
+    description: "Método 100% lúdico focado em canções, mímicas, brincadeiras físicas e tabuleiros que ensinam inglês brincando e sem esforço."
   },
   {
-    iconName: "SmartphoneOff",
+    iconName: "Clock",
+    title: "Economize até 10 horas por semana",
+    description: "Tudo pronto e estruturado passo a passo em português. Basta abrir, imprimir e aplicar em menos de 1 minuto."
+  },
+  {
+    iconName: "BookOpen",
     title: "Redução ativa de telas",
     description: "Proporcione atividades físicas e sensoriais divertidas que afastam seu filho do celular, gerando tempo de qualidade real."
   },
   {
-    iconName: "Brain",
+    iconName: "Rocket",
     title: "Desenvolvimento cognitivo",
-    description: "Estimula conexões neurais na fase mais importante da neuroplasticidade, expandindo a flexibilidade mental e memória."
+    description: "Estimula conexões neurais na fase mais importante da neuroplasticidade, expandindo a flexibilidade mental."
   },
   {
-    iconName: "Activity",
-    title: "Coordenação motora",
-    description: "Brincadeiras e dinâmicas corporais ativas, essenciais para o engajamento e desenvolvimento de alunos do 1º ano de escola ao 5º ano de escola."
-  },
-  {
-    iconName: "Focus",
+    iconName: "Target",
     title: "Aumento da concentração",
-    description: "Dinâmicas com começo, meio e fim projetadas para prender o foco e canalizar a energia de pequenos ativos que têm muita energia."
+    description: "Dinâmicas com começo, meio e fim projetadas para prender o foco e canalizar a energia de crianças ativas."
   },
   {
-    iconName: "HeartHandshake",
+    iconName: "Printer",
     title: "Interação familiar afetuosa",
-    description: "Crie memórias afetivas inesquecíveis enquanto você e seu filho se divertem e aprendem juntos no aconchego de casa."
+    description: "Crie memórias afetivas inesquecíveis enquanto se diverte e aprende junto no aconchego do lar."
   }
 ];
 
