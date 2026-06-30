@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Check, Gift, Sparkles, X } from 'lucide-react';
+import { Check, Gift } from 'lucide-react';
 // @ts-ignore
 import kitImage from '../assets/images/kit_mockup_premium_1782157527288.jpg';
 
@@ -8,18 +8,6 @@ interface OfferProps {
 }
 
 export default function Offer({ onCtaClick }: OfferProps) {
-  const premiumFeatures = [
-    "Mais de 500 atividades prontas",
-    "Aprendizado infantil longe das telas",
-    "Material organizado para imprimir",
-    "Economize horas de planejamento",
-    "Acesso imediato após a compra",
-    "Acesso vitalício",
-    "Avaliações e simulados inclusos",
-    "Certificados inclusos",
-    "Vídeos complementares"
-  ];
-
   const basicFeaturesIn = [
     "Mais de 500 atividades prontas",
     "Aprendizado infantil longe das telas",
@@ -34,15 +22,6 @@ export default function Offer({ onCtaClick }: OfferProps) {
     "Bingo em Inglês",
     "Dinâmicas de Inglês",
     "Pagamento único"
-  ];
-
-  const basicFeaturesOut = [
-    "Avaliações e Simulados de Inglês",
-    "Certificados",
-    "Vídeos",
-    "Guia de Conversação em Inglês",
-    "Inglês com Música",
-    "Acesso Vitalício"
   ];
 
   return (

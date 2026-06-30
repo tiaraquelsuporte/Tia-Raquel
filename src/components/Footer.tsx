@@ -1,4 +1,4 @@
-import { Shield, Sparkles, AlertCircle, Heart } from 'lucide-react';
+import { Shield, AlertCircle, Heart } from 'lucide-react';
 
 export default function Footer() {
   return (

@@ -20,41 +20,9 @@ export interface CtaOption {
   urgencyLevel: 'alta' | 'média' | 'foco-benefício';
 }
 
-export interface Benefit {
-  iconName: string;
-  title: string;
-  description: string;
-}
-
-export interface WhatYouReceiveItem {
-  id: number;
-  title: string;
-  description?: string;
-  features: string[];
-  badge: string;
-  footerLabel: string;
-}
-
-export interface Testimonial {
-  id: number;
-  name: string;
-  role: string;
-  avatarUrl: string;
-  text: string;
-  rating: number;
-  result: string;
-}
-
 export interface FAQItem {
   id: number;
   question: string;
   answer: string;
-}
-
-export interface SecondaryBenefit {
-  id: number;
-  title: string;
-  description: string;
-  icon: string;
 }
 

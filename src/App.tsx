@@ -1,10 +1,7 @@
 import React, { useState, useEffect, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  Sparkles, 
   ChevronRight, 
-  ShieldCheck, 
-  Clock, 
   Copy, 
   Check, 
   User, 
@@ -13,12 +10,10 @@ import {
   CreditCard, 
   QrCode, 
   CheckCircle,
-  HelpCircle,
-  Smartphone,
   Star
 } from 'lucide-react';
 
-import { headlines, subheadlines, ctas, microBenefits, quickProofs } from './data';
+import { headlines, subheadlines, ctas } from './data';
 import VideoPlayer from './components/VideoPlayer';
 import WhatYouReceive from './components/WhatYouReceive';
 import Bonuses from './components/Bonuses';
