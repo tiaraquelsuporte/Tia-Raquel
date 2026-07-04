@@ -19,7 +19,6 @@ import WhatYouReceive from './components/WhatYouReceive';
 import Offer from './components/Offer';
 import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
-import Footer from './components/Footer';
 
 export default function App() {
   // Global copywriting State
@@ -243,9 +242,6 @@ export default function App() {
 
       {/* 7. FAQ Section */}
       <FAQ />
-
-      {/* 9. Footer Compliance & Seals */}
-      <Footer />
 
       {/* --- SIMULATED CHECKOUT MODAL (For realistic customer testing in Sandbox!) --- */}
       <AnimatePresence>

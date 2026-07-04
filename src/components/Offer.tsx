@@ -14,23 +14,18 @@ export default function Offer({ onCtaClick }: OfferProps) {
     "Material organizado para imprimir",
     "Economize horas de planejamento",
     "Acesso imediato após a compra",
-    "Acesso vitalício",
-    "Avaliações e simulados inclusos",
     "Certificados inclusos",
-    "Vídeos complementares",
     "Material Inglês",
-    "Bingo em Inglês",
-    "Dinâmicas de Inglês",
     "Pagamento único"
   ];
 
   return (
-    <section id="oferta" className="pt-10 pb-20 bg-slate-50 text-slate-800 relative overflow-hidden flex flex-col items-center justify-center select-none">
+    <section id="oferta" className="pt-6 pb-12 bg-slate-50 text-slate-800 relative overflow-hidden flex flex-col items-center justify-center select-none">
       {/* Background soft glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-100/20 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="text-center mb-12 relative z-10 px-4">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1E3F] font-display tracking-tight mb-3">
+      <div className="text-center mb-6 relative z-10 px-4">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1E3F] font-display tracking-tight mb-2">
           Plano Ideal para Você
         </h2>
       </div>
@@ -40,7 +35,7 @@ export default function Offer({ onCtaClick }: OfferProps) {
         
         {/* ==================== PLANO BÁSICO ==================== */}
         <motion.div 
-          className="bg-[#0B132B] text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-blue-500/30 relative flex flex-col justify-between w-full overflow-hidden ring-2 ring-blue-500/25 transition-all"
+          className="bg-[#0B132B] text-white rounded-3xl p-5 sm:p-6 shadow-2xl border border-blue-500/30 relative flex flex-col justify-between w-full overflow-hidden ring-2 ring-blue-500/25 transition-all"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,51 +46,51 @@ export default function Offer({ onCtaClick }: OfferProps) {
 
           <div>
             {/* Header Title & Subtitle */}
-            <div className="mb-6 pt-3 text-center flex flex-col items-center">
+            <div className="mb-4 pt-4 sm:pt-6 text-center flex flex-col items-center">
               {/* Kit Mockup Image */}
-              <div className="flex justify-center mb-6 -mt-2">
+              <div className="flex justify-center mb-4 -mt-2">
                 <img 
                   src={kitImage} 
                   alt="Kit 500+ Dinâmicas de Inglês" 
-                  className="w-[290px] sm:w-[350px] h-auto drop-shadow-[0_25px_35px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-300 ease-out z-10"
+                  className="w-[220px] sm:w-[260px] h-auto drop-shadow-[0_20px_30px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-300 ease-out z-10"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight font-display uppercase mb-4">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-tight font-display uppercase mb-2">
                 GUIA COMPLETO
               </h3>
 
               {/* Pricing Section placed below title and above list */}
-              <div className="mb-6 pb-6 border-b border-white/[0.08] text-center">
-                <div className="text-slate-400 text-xs sm:text-sm font-semibold mb-1.5 line-through">
+              <div className="mb-4 pb-4 border-b border-white/[0.08] text-center w-full">
+                <div className="text-slate-400 text-xs font-semibold mb-1 line-through">
                   De R$ 37,90
                 </div>
 
-                <div className="inline-block px-3 py-1 bg-amber-400/10 border border-amber-400/20 text-amber-400 text-[9px] uppercase font-black tracking-widest rounded-md mb-2">
+                <div className="inline-block px-2 py-0.5 bg-amber-400/10 border border-amber-400/20 text-amber-400 text-[9px] uppercase font-black tracking-widest rounded mb-1.5">
                   POR APENAS
                 </div>
 
                 {/* Giant Price */}
                 <div className="flex items-start justify-center text-white font-sans tracking-tight">
-                  <span className="text-xl sm:text-2xl font-black mt-2 mr-0.5">R$</span>
-                  <span className="text-5xl sm:text-6xl font-black tracking-tight leading-none drop-shadow-[0_4px_20px_rgba(59,130,246,0.15)]">
+                  <span className="text-lg sm:text-xl font-black mt-1.5 mr-0.5">R$</span>
+                  <span className="text-4xl sm:text-5xl font-black tracking-tight leading-none drop-shadow-[0_4px_20px_rgba(59,130,246,0.15)]">
                     10
                   </span>
-                  <span className="text-2xl sm:text-3xl font-bold mt-2 font-mono">,00</span>
+                  <span className="text-xl sm:text-2xl font-bold mt-1.5 font-mono">,00</span>
                 </div>
               </div>
             </div>
 
             {/* Basic Inclusions Features List */}
-            <ul className="space-y-2.5 mb-6">
+            <ul className="space-y-1.5 mb-4">
               {basicFeaturesIn.map((feature, idx) => (
-                <li key={idx} className="flex items-start gap-2.5 text-slate-200 text-xs sm:text-[13px] leading-snug">
+                <li key={idx} className="flex items-start gap-2 text-slate-200 text-xs sm:text-[13px] leading-snug">
                   {/* Custom round green checkcircle matching Premium style */}
-                  <div className="w-4.5 h-4.5 rounded-full border border-emerald-500/50 bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-emerald-400 text-[11px] font-black leading-none">✓</span>
+                  <div className="w-4 h-4 rounded-full border border-emerald-500/50 bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-emerald-400 text-[10px] font-black leading-none">✓</span>
                   </div>
                   <span className="font-semibold text-slate-100">{feature}</span>
                 </li>
@@ -103,18 +98,18 @@ export default function Offer({ onCtaClick }: OfferProps) {
             </ul>
 
             {/* Exclusive Bonuses List right above the pricing for Basic, styled exactly like Premium */}
-            <div className="mb-6 pt-4.5 border-t border-white/[0.08] space-y-2.5">
-              <span className="text-[10px] font-black uppercase text-amber-400 tracking-wider flex items-center gap-1.5 mb-1.5">
+            <div className="mb-4 pt-3 border-t border-white/[0.08] space-y-1.5">
+              <span className="text-[10px] font-black uppercase text-amber-400 tracking-wider flex items-center gap-1.5 mb-1">
                 <Gift className="w-3.5 h-3.5" />
                 Bônus Exclusivos Inclusos:
               </span>
-              <div className="grid grid-cols-1 gap-2">
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-left">
-                  <Gift className="w-4 h-4 text-amber-400 shrink-0" />
+              <div className="grid grid-cols-1 gap-1.5">
+                <div className="flex items-center gap-2 p-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-left">
+                  <Gift className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                   <span className="text-slate-200 text-xs font-semibold">Guia de Conversação em Inglês</span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-left">
-                  <Gift className="w-4 h-4 text-emerald-400 shrink-0" />
+                <div className="flex items-center gap-2 p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-left">
+                  <Gift className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                   <span className="text-slate-200 text-xs font-semibold">Inglês com Música</span>
                 </div>
               </div>
@@ -122,7 +117,7 @@ export default function Offer({ onCtaClick }: OfferProps) {
           </div>
 
           {/* Pricing & CTA */}
-          <div className="mt-auto pt-4.5 border-t border-white/[0.08]">
+          <div className="mt-auto pt-3.5 border-t border-white/[0.08]">
             {/* Primary CTA Button for High Conversion */}
             <motion.a
               href="https://ggcheckout.app/checkout/v5/CW6ddAPZ8KteeXBEcgtt"
