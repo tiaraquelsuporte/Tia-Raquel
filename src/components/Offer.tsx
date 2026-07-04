@@ -82,9 +82,9 @@ export default function Offer({ onCtaClick }: OfferProps) {
                 <div className="flex items-start justify-center text-white font-sans tracking-tight">
                   <span className="text-xl sm:text-2xl font-black mt-2 mr-0.5">R$</span>
                   <span className="text-5xl sm:text-6xl font-black tracking-tight leading-none drop-shadow-[0_4px_20px_rgba(59,130,246,0.15)]">
-                    19
+                    10
                   </span>
-                  <span className="text-2xl sm:text-3xl font-bold mt-2 font-mono">,90</span>
+                  <span className="text-2xl sm:text-3xl font-bold mt-2 font-mono">,00</span>
                 </div>
               </div>
             </div>
