@@ -7,7 +7,7 @@ interface WhatYouReceiveProps {
 export default function WhatYouReceive({ onCtaClick }: WhatYouReceiveProps) {
   const coreDeliverables = [
     {
-      title: "+500 Dinâmicas Prontas",
+      title: "+700 Dinâmicas Prontas",
       description: "Atividades lúdicas de inglês, divertidas e prontas para brincar, garantindo um aprendizado leve e envolvente.",
       icon: "⭐",
       iconBg: "bg-blue-50 text-blue-600",

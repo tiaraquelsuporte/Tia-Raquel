@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Check, Gift } from 'lucide-react';
 // @ts-ignore
-import kitImage from '../assets/images/kit_mockup_premium_1782157527288.jpg';
+import kitImage from '../assets/images/kit_mockup_700_white_bg_1783319214377.jpg';
 
 interface OfferProps {
   onCtaClick?: (plan: 'basic' | 'premium') => void;
@@ -51,7 +51,7 @@ export default function Offer({ onCtaClick }: OfferProps) {
               <div className="flex justify-center mb-4 -mt-2">
                 <img 
                   src={kitImage} 
-                  alt="Kit 500+ Dinâmicas de Inglês" 
+                  alt="Kit 700+ Dinâmicas de Inglês" 
                   className="w-[220px] sm:w-[260px] h-auto drop-shadow-[0_20px_30px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-300 ease-out z-10"
                   referrerPolicy="no-referrer"
                   loading="lazy"
@@ -77,9 +77,9 @@ export default function Offer({ onCtaClick }: OfferProps) {
                 <div className="flex items-start justify-center text-white font-sans tracking-tight">
                   <span className="text-lg sm:text-xl font-black mt-1.5 mr-0.5">R$</span>
                   <span className="text-4xl sm:text-5xl font-black tracking-tight leading-none drop-shadow-[0_4px_20px_rgba(59,130,246,0.15)]">
-                    10
+                    19
                   </span>
-                  <span className="text-xl sm:text-2xl font-bold mt-1.5 font-mono">,00</span>
+                  <span className="text-xl sm:text-2xl font-bold mt-1.5 font-mono">,90</span>
                 </div>
               </div>
             </div>
@@ -104,13 +104,13 @@ export default function Offer({ onCtaClick }: OfferProps) {
                 Bônus Exclusivos Inclusos:
               </span>
               <div className="grid grid-cols-1 gap-1.5">
-                <div className="flex items-center gap-2 p-2 rounded-xl bg-amber-500/10 border border-amber-500/20 text-left">
-                  <Gift className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                  <span className="text-slate-200 text-xs font-semibold">Guia de Conversação em Inglês</span>
-                </div>
                 <div className="flex items-center gap-2 p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-left">
                   <Gift className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                   <span className="text-slate-200 text-xs font-semibold">Inglês com Música</span>
+                </div>
+                <div className="flex items-center gap-2 p-2 rounded-xl bg-violet-500/10 border border-violet-500/20 text-left">
+                  <Gift className="w-3.5 h-3.5 text-violet-400 shrink-0" />
+                  <span className="text-slate-200 text-xs font-semibold">Certificado</span>
                 </div>
               </div>
             </div>
@@ -125,12 +125,16 @@ export default function Offer({ onCtaClick }: OfferProps) {
               rel="noopener noreferrer"
               onClick={() => {
                 try {
-                  (window as any).pixelId = "6a3c2ccd2835ec134e52ecaa";
-                  const a = document.createElement("script");
-                  a.setAttribute("async", "");
-                  a.setAttribute("defer", "");
-                  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-                  document.head.appendChild(a);
+                  const isIframe = window.self !== window.top;
+                  const isSandbox = window.location.hostname.includes('aistudio') || window.location.hostname.includes('localhost') || window.location.hostname.includes('0.0.0.0');
+                  if (!isIframe && !isSandbox) {
+                    (window as any).pixelId = "6a3c2ccd2835ec134e52ecaa";
+                    const a = document.createElement("script");
+                    a.setAttribute("async", "");
+                    a.setAttribute("defer", "");
+                    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+                    document.head.appendChild(a);
+                  }
                 } catch (e) {
                   console.error(e);
                 }

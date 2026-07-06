@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 
 import { headlines, subheadlines, ctas } from './data';
-import VideoPlayer from './components/VideoPlayer';
+import kitMockupImage from './assets/images/kit_mockup_700_white_bg_1783319214377.jpg';
 import WhatYouReceive from './components/WhatYouReceive';
 import Offer from './components/Offer';
 import Reviews from './components/Reviews';
@@ -153,13 +153,24 @@ export default function App() {
             </motion.p>
           </AnimatePresence>
 
-          {/* PREMIUM INTERACTIVE VIDEO PLAYER */}
-          <div className="w-full mt-4 sm:mt-6 select-none overflow-visible">
-            <VideoPlayer />
+          {/* HERO PRODUCT MOCKUP IMAGE */}
+          <div className="w-full my-6 select-none flex justify-center">
+            <img 
+              src="abaixo da subheadline mokup.jfif" 
+              alt="Mockup" 
+              style={{ 
+                width: '100%', 
+                height: 'auto', 
+                objectFit: 'contain', 
+                border: 'none', 
+                margin: '0', 
+                padding: '0' 
+              }} 
+            />
           </div>
 
           {/* ACCELERATED CONVERSION CTA MODULE (Green button in all caps, spacious shadow) */}
-          <div className="mt-4 w-full max-w-sm flex flex-col items-center px-4">
+          <div className="mt-2 w-full max-w-sm flex flex-col items-center px-4">
             <AnimatePresence mode="wait">
               <motion.button
                 id="cta-hero-primary"
@@ -230,7 +241,7 @@ export default function App() {
         setIsCheckoutOpen(true);
       }} />
 
-      {/* 4. Oferta (Promocional R$ 10,00) */}
+      {/* 4. Oferta (Promocional R$ 19,90) */}
       <Offer onCtaClick={(plan) => {
         setSelectedPlan(plan);
         setCheckoutStep(1);
@@ -282,7 +293,7 @@ export default function App() {
                   Concluir Inscrição - Exploração Inglês
                 </h3>
                 <p className="text-[10px] text-blue-100 opacity-90 mt-0.5">
-                  Preço Promocional Único: <span className="line-through">{selectedPlan === 'premium' ? 'R$ 67,90' : 'R$ 37,90'}</span> por <strong className="text-yellow-300 text-xs">{selectedPlan === 'premium' ? 'R$ 10,00' : 'R$ 10,00'}</strong>
+                  Preço Promocional Único: <span className="line-through">{selectedPlan === 'premium' ? 'R$ 67,90' : 'R$ 37,90'}</span> por <strong className="text-yellow-300 text-xs">{selectedPlan === 'premium' ? 'R$ 19,90' : 'R$ 19,90'}</strong>
                 </p>
               </div>
 

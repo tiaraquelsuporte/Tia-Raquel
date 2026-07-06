@@ -15,20 +15,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" />
     <!-- Meta Pixel Code -->
     <script>
-      window.pixelId = "6a3c2ccd2835ec134e52ecaa";
-      var a = document.createElement("script");
-      a.setAttribute("async", "");
-      a.setAttribute("defer", "");
-      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-      document.head.appendChild(a);
+      // Only load tracking and UTMify scripts when not in the AI Studio preview iframe or local sandbox to prevent circular JSON structure crashes
+      const isIframe = window.self !== window.top;
+      const isSandbox = window.location.hostname.includes('aistudio') || window.location.hostname.includes('localhost') || window.location.hostname.includes('0.0.0.0');
+      
+      if (!isIframe && !isSandbox) {
+        window.pixelId = "6a3c2ccd2835ec134e52ecaa";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+
+        var b = document.createElement("script");
+        b.setAttribute("async", "");
+        b.setAttribute("defer", "");
+        b.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
+        b.setAttribute("data-utmify-prevent-xcod-sck", "");
+        b.setAttribute("data-utmify-prevent-subids", "");
+        document.head.appendChild(b);
+      } else {
+        console.log("AI Studio Sandbox or iframe detected. Skipping external tracking scripts to prevent circular structure errors.");
+      }
     </script>
-    <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-xcod-sck
-      data-utmify-prevent-subids
-      async
-      defer
-    ></script>
   </head>
   <body>
     <div id="root"></div>

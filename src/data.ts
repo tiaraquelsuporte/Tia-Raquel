@@ -3,18 +3,18 @@ import { HeadlineOption, SubheadlineOption, CtaOption, FAQItem } from './types';
 export const headlines: HeadlineOption[] = [
   {
     id: 1,
-    text: "+500 dinâmicas prontas para ensinar inglês de forma divertida e eficiente.",
+    text: "+700 dinâmicas prontas para ensinar inglês de forma divertida e eficiente.",
     highlightedParts: [
-      { text: "+500 dinâmicas prontas ", color: "amarelo" },
+      { text: "+700 dinâmicas prontas ", color: "amarelo" },
       { text: "para ensinar inglês de forma divertida e eficiente.", color: "normal" }
     ],
     neuromarketingFocus: "Foco no volume de dinâmicas prontas e na eficiência prática direta."
   },
   {
     id: 2,
-    text: "500+ Atividades para Ensinar Inglês Brincando",
+    text: "700+ Atividades para Ensinar Inglês Brincando",
     highlightedParts: [
-      { text: "500+ Atividades", color: "amarelo" },
+      { text: "700+ Atividades", color: "amarelo" },
       { text: " para Ensinar ", color: "normal" },
       { text: "Inglês Brincando", color: "verde" }
     ],
@@ -158,7 +158,7 @@ export const headlines: HeadlineOption[] = [
 export const subheadlines: SubheadlineOption[] = [
   {
     id: 1,
-    text: "Mais de 500 atividades prontas para desenvolver o inglês infantil de forma divertida, natural e 100% longe das telas.",
+    text: "Mais de 700 atividades prontas para desenvolver o inglês infantil de forma divertida, natural e 100% longe das telas.",
     focus: "Foco em Aprendizado Ativo Sem Telas"
   },
   {
@@ -234,7 +234,7 @@ export const subheadlines: SubheadlineOption[] = [
 ];
 
 export const ctas: CtaOption[] = [
-  { id: 1, text: "🚀 QUERO AS 500 ATIVIDADES AGORA", urgencyLevel: "alta" },
+  { id: 1, text: "🚀 QUERO AS 700 ATIVIDADES AGORA", urgencyLevel: "alta" },
   { id: 2, text: "🚀 LIBERAR MEU ACESSO IMEDIATO", urgencyLevel: "alta" },
   { id: 3, text: "🚀 COMEÇAR A ENSINAR INGLÊS", urgencyLevel: "foco-benefício" },
   { id: 4, text: "🚀 GARANTIR MEU ACESSO IMEDIATO", urgencyLevel: "alta" },
