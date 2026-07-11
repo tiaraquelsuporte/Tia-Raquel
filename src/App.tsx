@@ -14,11 +14,11 @@ import {
 } from 'lucide-react';
 
 import { headlines, subheadlines, ctas } from './data';
-import kitMockupImage from './assets/images/kit_mockup_700_white_bg_1783319214377.jpg';
 import WhatYouReceive from './components/WhatYouReceive';
 import Offer from './components/Offer';
 import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
+import VideoPlayer from './components/VideoPlayer';
 
 export default function App() {
   // Global copywriting State
@@ -37,7 +37,6 @@ export default function App() {
   // Form details
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
   const [paymentMethod, setPaymentMethod] = useState<'pix' | 'cartao'>('pix');
-  const [promoCode, setPromoCode] = useState('');
   const [isCopied, setIsCopied] = useState(false);
   const [emailError, setEmailError] = useState('');
 
@@ -108,7 +107,7 @@ export default function App() {
           <div className="w-[800px] h-[800px] rounded-full border border-slate-100 absolute -top-[400px]" />
         </div>
 
-        <div className="max-w-3xl mx-auto flex flex-col items-center relative z-10 w-full pt-4">
+        <div className="max-w-5xl mx-auto flex flex-col items-center relative z-10 w-full pt-4">
 
           {/* DYNAMIC HEADLINE (CRO optimized alignment and coloring) */}
           <AnimatePresence mode="wait">
@@ -153,43 +152,43 @@ export default function App() {
             </motion.p>
           </AnimatePresence>
 
-          {/* HERO PRODUCT MOCKUP IMAGE */}
-          <div className="w-full my-6 select-none flex justify-center">
-            <img 
-              src="abaixo da subheadline mokup.jfif" 
-              alt="Mockup" 
-              style={{ 
-                width: '100%', 
-                height: 'auto', 
-                objectFit: 'contain', 
-                border: 'none', 
-                margin: '0', 
-                padding: '0' 
-              }} 
-            />
-          </div>
+          {/* DYNAMIC PORTRAIT VIDEO PRESENTATION / VSL */}
+          <VideoPlayer />
 
           {/* ACCELERATED CONVERSION CTA MODULE (Green button in all caps, spacious shadow) */}
           <div className="mt-2 w-full max-w-sm flex flex-col items-center px-4">
             <AnimatePresence mode="wait">
-              <motion.button
+              <motion.a
                 id="cta-hero-primary"
                 key={currentCtaId}
+                href="https://ggcheckout.app/checkout/v5/CW6ddAPZ8KteeXBEcgtt"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => {
-                  const element = document.getElementById('oferta');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
+                  try {
+                    const isIframe = window.self !== window.top;
+                    const isSandbox = window.location.hostname.includes('aistudio') || window.location.hostname.includes('localhost') || window.location.hostname.includes('0.0.0.0');
+                    if (!isIframe && !isSandbox) {
+                      (window as any).pixelId = "6a3c2ccd2835ec134e52ecaa";
+                      const a = document.createElement("script");
+                      a.setAttribute("async", "");
+                      a.setAttribute("defer", "");
+                      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+                      document.head.appendChild(a);
+                    }
+                  } catch (e) {
+                    console.error(e);
                   }
                 }}
-                className="w-full py-5 px-6 rounded-2xl bg-[#22C55E] hover:bg-[#1db354] text-white font-extrabold text-[15px] sm:text-base tracking-wider shadow-[0_12px_32px_rgba(34,197,94,0.35)] hover:scale-[1.025] active:scale-[0.98] cursor-pointer transition-all border border-emerald-400/20 flex items-center justify-center gap-2 uppercase select-none font-sans"
+                className="w-full py-5 px-6 rounded-2xl bg-[#2563EB] hover:bg-[#1d4ed8] text-white font-extrabold text-[15px] sm:text-base tracking-wider shadow-[0_12px_32px_rgba(37,99,235,0.35)] hover:scale-[1.025] active:scale-[0.98] cursor-pointer transition-all border border-blue-400/20 flex items-center justify-center gap-2 uppercase select-none font-sans text-center"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
-                <span>{activeCta.text}</span>
+                <span>quero o guia completo</span>
                 <ChevronRight className="w-5 h-5 text-yellow-300 animate-pulse" />
-              </motion.button>
+              </motion.a>
             </AnimatePresence>
 
             {/* Social proof message below the CTA button */}
@@ -231,8 +230,6 @@ export default function App() {
 
         </div>
       </section>
-
-
 
       {/* 2. O que você recebe */}
       <WhatYouReceive onCtaClick={() => {
